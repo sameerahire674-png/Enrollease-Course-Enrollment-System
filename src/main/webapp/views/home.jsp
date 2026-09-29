@@ -123,7 +123,9 @@
         <a href="${pageContext.request.contextPath}/enroll">Enrollment</a>
         <a href="#">About</a>
         <a href="/courses">Courses</a>
-        <a href="getallstudent">Get All Enroll Student</a>
+        <a href="${pageContext.request.contextPath}/getallstudent">
+    Get All Enroll Student
+</a>
     </div>
 </div>
 
