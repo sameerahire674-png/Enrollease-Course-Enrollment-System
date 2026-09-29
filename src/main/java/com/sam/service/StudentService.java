@@ -1,6 +1,9 @@
 package com.sam.service;
 
 import java.util.Arrays;
+import jakarta.validation.Valid;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,29 +49,41 @@ public class StudentService {
 
 	    String course = student.getCourse();
 
+	   
+
 	    if (course.equalsIgnoreCase("Java Full Stack")) {
+
 	        student.setCourseprice(50000.00);
 
 	    } else if (course.equalsIgnoreCase("Spring Boot")) {
+
 	        student.setCourseprice(45000.00);
 
 	    } else if (course.equalsIgnoreCase("Python")) {
+
 	        student.setCourseprice(40000.00);
 
 	    } else if (course.equalsIgnoreCase("Data Structures")) {
+
 	        student.setCourseprice(35000.00);
 
 	    } else if (course.equalsIgnoreCase("Web Development")) {
+
 	        student.setCourseprice(30000.00);
 
 	    } else if (course.equalsIgnoreCase("Cloud AWS")) {
+
 	        student.setCourseprice(55000.00);
 
 	    } else if (course.equalsIgnoreCase("AI ML")) {
+
 	        student.setCourseprice(70000.00);
+
+	    } else {
+
+	        throw new IllegalArgumentException("Invalid course selected"+course);
 	    }
 
 	    return studrepo.save(student);
 	}
-
 }
