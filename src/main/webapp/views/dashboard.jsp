@@ -110,6 +110,9 @@ tr:hover {
     <a href="${pageContext.request.contextPath}/">Home</a>
     <a href="${pageContext.request.contextPath}/enroll">Enrollment Form</a>
     <a href="${pageContext.request.contextPath}/courses">Courses</a>
+    <a href="${pageContext.request.contextPath}/getallstudent">
+    Get All Enroll Student
+</a>
 </div>
 
 
